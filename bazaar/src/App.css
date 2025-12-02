@@ -1,0 +1,54 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-secondary);
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding: 2rem 0;
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Page Container */
+.page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem 0;
+  }
+
+  .page-container {
+    padding: 0 1rem;
+  }
+}
+
+/* Toast Notifications Override */
+.Toastify__toast {
+  border-radius: var(--radius-lg) !important;
+  font-family: var(--font-primary) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.Toastify__toast--success {
+  background: var(--success-color) !important;
+}
+
+.Toastify__toast--error {
+  background: var(--error-color) !important;
+}
+
+.Toastify__toast--warning {
+  background: var(--warning-color) !important;
+}
+
+.Toastify__toast--info {
+  background: var(--primary-color) !important;
+}

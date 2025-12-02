@@ -1,0 +1,333 @@
+/* Modal Styles */
+.subscription-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.2s ease-in-out;
+    padding: 2rem;
+}
+
+.subscription-modal-content {
+    background: #fafaf9;
+    border-radius: 24px;
+    width: 98vw;
+    max-width: 1800px;
+    max-height: 95vh;
+    overflow-y: auto;
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.subscription-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 2rem 1rem;
+    background: #fafaf9;
+    border-radius: 24px 24px 0 0;
+    flex-shrink: 0;
+}
+
+.subscription-modal-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1f2937;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+}
+
+.subscription-modal-subtitle {
+    color: #6b7280;
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+.subscription-modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.subscription-modal-close:hover {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.subscription-modal-body {
+    padding: 0.5rem 1rem 2rem;
+    background: #fafaf9;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.subscription-modal-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+/* Grid Layout */
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .plans-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Pricing Card Styles */
+.pricing-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    min-width: 0;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.pricing-card.featured {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border: none;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.3);
+}
+
+.card-badge {
+    margin-bottom: 1rem;
+    height: 24px;
+}
+
+.card-badge span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: #f59e0b;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.pricing-card.featured .card-badge span {
+    background: white;
+    color: #1f2937;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: white;
+    line-height: 1.2;
+}
+
+.card-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: #6b7280;
+    min-height: 3rem;
+}
+
+.pricing-card.featured .card-description {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.card-price {
+    margin-bottom: 1.5rem;
+}
+
+.price-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0.25rem;
+}
+
+.amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1;
+}
+
+.pricing-card.featured .amount {
+    color: white;
+}
+
+.period {
+    margin-left: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.pricing-card.featured .period {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.credits {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #6b7280;
+    margin: 0;
+}
+
+.pricing-card.featured .credits {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    flex: 1;
+}
+
+.card-features li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    color: #374151;
+    line-height: 1.4;
+}
+
+.pricing-card.featured .card-features li {
+    color: white;
+}
+
+.card-features svg {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    color: #10b981;
+}
+
+.pricing-card.featured .card-features svg {
+    color: white;
+}
+
+.card-button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    border: 2px solid #1f2937;
+    color: #1f2937;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.card-button:hover {
+    background: #1f2937;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.pricing-card.featured .card-button {
+    background: #1f2937;
+    border-color: #1f2937;
+    color: white;
+}
+
+.pricing-card.featured .card-button:hover {
+    background: #111827;
+    border-color: #111827;
+}
+
+.card-button:disabled {
+    background: #10b981;
+    border-color: #10b981;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px) scale(0.98); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Scrollbar styling */
+.subscription-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.subscription-modal-content::-webkit-scrollbar-track {
+    background: #f3f4f6;
+    border-radius: 10px;
+}
+
+.subscription-modal-content::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+.subscription-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}

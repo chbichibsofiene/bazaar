@@ -1,0 +1,32 @@
+spring.application.name=e-commece-multivendor  
+  
+server.port=5454  
+
+spring.jpa.hibernate.ddl-auto=update  
+spring.datasource.url=jdbc:mysql://localhost:3306/bazaar_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true  
+spring.datasource.username=root  
+spring.datasource.password=your_database_password  
+spring.jpa.show-sql=true  
+spring.jpa.properties.hibernate.format_sql=true 
+  
+# Gmail SMTP Configuration
+spring.mail.host=smtp.gmail.com
+spring.mail.port=587
+spring.mail.username=your_email@gmail.com
+spring.mail.password=your_gmail_app_password
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.starttls.required=true
+spring.mail.properties.mail.smtp.ssl.trust=smtp.gmail.com
+spring.mail.properties.mail.smtp.connectiontimeout=5000
+spring.mail.properties.mail.smtp.timeout=5000
+spring.mail.properties.mail.smtp.writetimeout=5000
+  
+# Stripe Configuration
+stripe.secret.key=your_stripe_secret_key
+stripe.webhook.secret=your_stripe_webhook_secret
+frontend.success.url=http://localhost:5174/payment/success
+frontend.cancel.url=http://localhost:5174/payment/cancel
+
+# Gemini API Configuration
+gemini.api.key=your_gemini_api_key

@@ -1,0 +1,62 @@
+# Frontend (React)
+bazaar/node_modules/
+bazaar/dist/
+bazaar/.env
+bazaar/.env.local
+bazaar/.env.production
+bazaar/.vite/
+bazaar/.cache/
+
+# Mobile (React Native)
+bazaar-mobile/node_modules/
+bazaar-mobile/.expo/
+bazaar-mobile/.expo-shared/
+bazaar-mobile/dist/
+bazaar-mobile/*.jks
+bazaar-mobile/*.p8
+bazaar-mobile/*.p12
+bazaar-mobile/*.key
+bazaar-mobile/*.mobileprovision
+bazaar-mobile/*.orig.*
+bazaar-mobile/web-build/
+bazaar-mobile/.env
+
+# Backend (Spring Boot)
+e-commece-multivendor/target/
+e-commece-multivendor/.mvn/
+e-commece-multivendor/mvnw
+e-commece-multivendor/mvnw.cmd
+e-commece-multivendor/.idea/
+e-commece-multivendor/*.iml
+e-commece-multivendor/*.iws
+e-commece-multivendor/*.ipr
+e-commece-multivendor/.classpath
+e-commece-multivendor/.project
+e-commece-multivendor/.settings/
+e-commece-multivendor/bin/
+e-commece-multivendor/build/
+e-commece-multivendor/out/
+e-commece-multivendor/logs/
+e-commece-multivendor/*.log
+
+# Environment files with sensitive data
+**/application-local.properties
+**/application-prod.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
